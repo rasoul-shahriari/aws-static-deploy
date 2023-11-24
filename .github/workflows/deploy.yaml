@@ -6,7 +6,7 @@ on:
       branch:
         description: 'Target branch for deployment'
         required: true
-        default: 'main'
+        default: main
 
 jobs:
   deploy:
