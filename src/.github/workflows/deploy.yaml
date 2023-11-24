@@ -1,0 +1,23 @@
+name: Deploy to Main
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Target branch for deployment'
+        required: true
+        default: 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Merge develop into main
+      run: |
+        git checkout ${{ github.event.inputs.branch }}
+        git merge --no-ff origin/develop
+        git push origin ${{ github.event.inputs.branch }}
