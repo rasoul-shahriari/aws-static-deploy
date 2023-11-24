@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -16,6 +15,7 @@ function App() {
         >
           Learn React
         </a>
+        <a href="https://app.daily.dev/rasoul"><img src="https://api.daily.dev/devcards/1785d947e30d4427b719f1344d47cf47.png?r=9tr" width="400" alt="rasoul shahriary's Dev Card"/></a>
       </header>
     </div>
   );
