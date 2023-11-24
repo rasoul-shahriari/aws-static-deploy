@@ -23,6 +23,7 @@ jobs:
 
     - name: Merge develop into main
       run: |
-        git checkout ${{ github.event.inputs.branch }}
+        target_branch=${{ github.event.inputs.branch }}
+        git checkout $target_branch
         git merge --no-ff origin/develop
-        git push origin ${{ github.event.inputs.branch }}
+        git push origin $target_branch
